@@ -11,24 +11,18 @@ void Enqueue(int x){
     else{
         if(F==-1){
             F=0;
-        }
-        R++;
-        Q[R]=x;
-        printf("Inserted: %d\n",x);
     }
 }
 void Dequeue(){
-    if(F==-1||F>R){
+    if(F==-1&&F>R){
         printf("Queue is empty\n");
     }
     else{
         printf("Deleted element is: %d\n",Q[F]);
-        F++;
-        if(F>R){
-            F=R=-1;
+        F=F+i;
         }
     }
-}
+
 
 void main(){
     Enqueue(10);
@@ -39,6 +33,7 @@ void main(){
 
     Dequeue();
     Dequeue();
+    Enqueue(25);
 
     Enqueue(25);
 }
